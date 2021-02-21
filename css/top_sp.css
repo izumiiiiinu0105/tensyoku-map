@@ -1,0 +1,630 @@
+@charset "UTF-8";
+
+/**
+ * 
+ * インデックスページ用レイアウト (スマホ/タブレット)
+ * June 3, 2019
+ * 
+**/
+
+/*======================================================================
+
+  #contents-head-index (メインビジュアルエリア)
+
+======================================================================*/
+
+#contents-head-index {
+  font-size:0.875rem; /* 14px */
+}
+
+#contents-head-index > .wrap {
+  overflow:hidden;
+  position:relative;
+}
+
+@media screen and (max-width: 650px) { /* 650px以下 */
+
+  #contents-head-index > .wrap {
+    height:400px; /* メインビジュアルエリアの高さ設定 */
+  }
+  
+}
+
+/*----------------------------------------------------------------------
+  #brand-area (ブランド名)
+----------------------------------------------------------------------*/
+
+#contents-head-index #brand-area {
+  padding:10px;
+  position:absolute;
+  top:35%; /* トップからの位置指定(天地中央は50%) */
+  -webkit-transform:translate(0, -50%); /* Safari用 */
+  transform: translate(0, -50%);
+  width:100%;
+  z-index:2;
+}
+
+#contents-head-index #brand-area .wrap {
+  width:100% !important;
+}
+
+#contents-head-index #brand-area .background {
+  display:inline-block;
+  float:right;
+}
+
+#contents-head-index #brand-area .background.white {
+  background-color:rgba(255,255,255,0.5);
+}
+
+#contents-head-index #brand-area .background.black {
+  background-color:rgba(0,0,0,0.5);
+}
+
+#contents-head-index #brand-area .title {
+  font-size:1rem; /* 16px */
+  font-weight:bold;
+  line-height:1.3;
+}
+
+#contents-head-index #brand-area .title .brand-logo {
+  display:block;
+  font-style:italic;
+}
+
+#contents-head-index #brand-area .title .brand-logo img {
+  max-height:20px;
+}
+
+#contents-head-index #brand-area .title .brand-name {
+  display:inline-block;
+  font-size:2rem; /* 32px */
+  line-height:1;
+  margin-top:5px;
+}
+
+#contents-head-index #brand-area .title .brand-name img {
+  max-height:41px;
+}
+
+#contents-head-index #brand-area .more {
+  margin-top:20px;
+}
+
+#contents-head-index #brand-area .more a {
+  font-size:0.875rem; /* 14px */
+  min-width:130px;
+}
+
+/*----------------------------------------------------------------------
+  #mainvisual (メインビジュアル)
+----------------------------------------------------------------------*/
+
+#mainvisual {
+  height:100%;
+  padding:0;
+  text-align:center;
+}
+
+@media screen and (max-width: 650px) { /* 650px以下 */
+
+  #mainvisual video {
+    height:inherit;
+    max-width:inherit;
+    min-width:100%;
+    min-height:100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+  }
+  
+}
+
+@media screen and (min-width: 651px) and (max-width: 959px) { /* 651px以上、959px以下 */
+
+  #mainvisual:before {
+    content:"";
+    display:block;
+    padding-top:56.25%;
+  }
+  
+  #mainvisual video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: inherit;
+    height: inherit;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+}
+
+#mainvisual .swiper-slide {
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+#mainvisual .swiper-control {
+  bottom:0;
+  display:none;
+  height:40px;
+  left:0;
+  line-height:1;
+  margin:auto;
+  position:absolute;
+  right:0;
+  width:100%;
+  z-index:1;
+}
+
+#mainvisual .swiper-button-next,
+#mainvisual .swiper-button-prev {
+  height:40px;
+  margin:0;
+  position:relative;
+  top:0;
+  width:40px;
+}
+
+#mainvisual .swiper-button-prev {
+  float:left;
+  left:0;
+}
+
+#mainvisual .swiper-button-next {
+  float:right;
+  right:0;
+}
+
+#mainvisual .swiper-button-next:hover:before,
+#mainvisual .swiper-button-prev:hover:before {
+  border-color:rgba(255,255,255,1);
+}
+
+#mainvisual .swiper-pagination {
+  bottom:0;
+  left:0;
+  margin:auto;
+  right:0;
+  top:15px;
+  width:calc(100% - 80px);
+}
+
+#mainvisual .swiper-pagination-bullet {
+  background-color:#fff;
+  border:none;
+  border-radius:0;
+  height:10px;
+  margin:0 10px;
+  opacity:0.4;
+  width:10px;
+}
+
+#mainvisual .swiper-pagination-bullet-active {
+  opacity:1;
+}
+
+#mainvisual .video-control {
+  top:10px;
+  cursor:pointer;
+  display:block;
+  right:10px;
+  list-style:1;
+  position:absolute;
+  width:15px;
+  z-index:1;
+}
+
+#mainvisual .video-control > span {
+  height:15px;
+  display:block;
+}
+
+#mainvisual .video-control > span.none {
+  display:none;
+}
+
+#mainvisual .video-control .pause:before,
+#mainvisual .video-control .pause:after {
+  background-color:rgba(255,255,255,0.7);
+  content:"";
+  display:block;
+  height:15px;
+  list-style:1;
+  position:absolute;
+  top:0;
+  width:5px;
+}
+
+#mainvisual .video-control .pause:before {
+  left:0;
+}
+
+#mainvisual .video-control .pause:after {
+  right:0;
+}
+
+#mainvisual .video-control .play:before {
+  border-top:8px transparent solid;
+  border-bottom:8px transparent solid;
+  border-left:12px rgba(255,255,255,0.7) solid;
+  content:"";
+  display:block;
+  height:0;
+  left:2px;
+  list-style:1;
+  position:absolute;
+  top:0;
+  width:0;
+}
+
+/*----------------------------------------------------------------------
+  #head-banner (メインビジュアル内のバナーエリア)
+----------------------------------------------------------------------*/
+
+#head-banner {
+  padding:20px 10px 10px 10px;
+  text-align:center;
+}
+
+.js #head-banner {
+  padding-bottom:10px;
+}
+
+.js #head-banner.swiper-container {
+  padding-bottom:40px;
+}
+
+.js #head-banner.swiper-container.unmove {
+  padding-bottom:0;
+}
+
+#head-banner .swiper-control {
+  display:none;
+}
+
+#head-banner .swiper-button-next {
+  right:0;
+}
+
+#head-banner .swiper-button-prev {
+  left:0;
+}
+
+#head-banner .swiper-pagination {
+  bottom:6px;
+}
+
+#head-banner .box {
+  display:inline-block;
+  max-width:300px;
+}
+
+#head-banner a {
+  background-color:#fff;
+  display:block;
+}
+
+/*----------------------------------------------------------------------
+  #release-area (プレスリリース)
+----------------------------------------------------------------------*/
+
+#release-area {
+  bottom:10px;
+  left:0;
+  line-height:1.4;
+  margin:auto;
+  overflow:hidden;
+  padding:0 10px;
+  position:absolute;
+  right:0;
+  width:100%;
+  z-index:2;
+}
+
+#mainvisual + #release-area {
+  bottom:50px;
+}
+
+#mainvisual.unmove + #release-area {
+  bottom:0;
+}
+
+#release-area a {
+  text-decoration:none;
+}
+
+#release-area a:hover {
+  text-decoration:underline;
+}
+
+#release-area a.colorWhite {
+  color:#fff;
+}
+
+#release-area.background.black {
+  background-color:rgba(0,0,0,0.5);
+  padding: 10px;
+}
+
+/*======================================================================
+
+  #event-banner (イベントバナーエリア)
+
+======================================================================*/
+
+#event-banner {
+  background-position:center;
+  background-size:cover;
+  clear:both;
+  display:flex;
+  width:100%;
+}
+
+#event-banner .container {
+  padding:20px 10px;
+  text-align:center;
+}
+
+#event-banner .container > div {
+  color:#fff;
+  display:inline-block;
+  font-size:1.125rem; /* 18px */
+  font-weight:bold;
+  margin:auto;
+  text-align:left;
+}
+
+#event-banner .container > nav {
+  margin-top:20px;
+}
+
+/*======================================================================
+
+  .layout.features (特長ボックス)
+
+======================================================================*/
+
+.layout.features {
+  text-align:center;
+}
+
+.layout.features .wrap {
+  display:inline-block;
+  text-align:left;
+}
+
+.layout.features .box {
+  border:2px #ccc solid;
+  border-radius:6px;
+  display:block;
+  margin:0 10px;
+  min-height:85px;
+  padding:15px 10px;
+  position:relative;
+}
+
+.layout.features .box + .box {
+  margin-top:20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) { /* タブレット */
+
+  .layout.features .wrap:not(.single) .box {
+    float:left;
+    width:calc(50% - 20px);
+  }
+
+  .layout.features .box:nth-child(-n+2) {
+    margin-top:0;
+  }
+  
+}
+
+#mainContents .layout.features a.box {
+  color:#333;
+  text-decoration:none;
+  transition-duration:.2s;
+  transition-property:border-color, color;
+}
+
+#mainContents .layout.features a.box:hover {
+  border-color:#528ce3;
+  color:#0045b3;
+  text-decoration:underline;
+}
+
+.layout.features .box .icon {
+  left:0;
+  position:absolute;
+  top:0;
+}
+
+.layout.features .box .icon img {
+  max-width:80px;
+}
+
+.layout.features .box .icon + .text {
+  padding-left:75px
+}
+
+.layout.features .box .text {
+  font-size:0.875rem; /* 14px */
+  line-height:1.4;
+}
+
+/*======================================================================
+
+  .layout.banners (バナーエリア)
+
+======================================================================*/
+
+.layout.banners .grid-cell {
+  margin:10px auto 0;
+  text-align:center;
+}
+
+.layout.banners .separate {
+  overflow:hidden;
+}
+
+.layout.banners .separate .grid-cell {
+  float:left;
+  width:calc(50% - 5px);
+}
+
+.layout.banners .separate .grid-cell:nth-child(2n+1) {
+  clear:left;
+  margin-right:5px;
+}
+
+.layout.banners .separate .grid-cell:nth-child(2n+2) {
+  margin-left:5px;
+}
+
+/*======================================================================
+
+  .layout.sns-links (ソーシャルメディアリンクエリア)
+
+======================================================================*/
+
+.layout.sns-links {
+  border-top:2px #ccc solid;
+  border-bottom:2px #ccc solid;
+  padding:10px;
+}
+
+.layout.banners + .layout.sns-links {
+  margin-top:40px;
+}
+
+.layout.sns-links > div {
+  margin:5px 0;
+  text-align:center;
+}
+
+.layout.sns-links > div + div {
+  margin-top:10px;
+}
+
+/*----------------------------------------------------------------------
+  .follow (フォローリンク)
+----------------------------------------------------------------------*/
+
+.layout.sns-links .follow .sns {
+  color:#969696;
+  display:table;
+  margin:auto;
+}
+
+.layout.sns-links .follow .sns > dt,
+.layout.sns-links .follow .sns > dd {
+  display:table-cell;
+  vertical-align:middle;
+}
+
+.layout.sns-links .follow .sns > dt {
+  white-space:nowrap;
+}
+
+.layout.sns-links .follow .sns ul {
+  letter-spacing:-0.4em;
+  list-style:none;
+  text-align:left;
+}
+
+.layout.sns-links .follow .sns ul li {
+  display:inline-block;
+  letter-spacing:0;
+  line-height:1;
+}
+
+.layout.sns-links .follow .sns ul li a {
+  display:block;
+  height:40px;
+  margin:5px;
+  width:40px;
+}
+
+/*----------------------------------------------------------------------
+  .share (シェアリンク)
+----------------------------------------------------------------------*/
+
+.layout.sns-links .share {
+  letter-spacing:-0.4em;
+  overflow:hidden;
+}
+
+.layout.sns-links .share > div {
+  display:inline-block;
+  letter-spacing:0;
+  line-height:1;
+  margin:5px;
+  vertical-align:top;
+}
+
+/*======================================================================
+
+  .layout.related-solution (関連ソリューションエリア)
+
+======================================================================*/
+
+.layout.related-solution {
+  text-align:center;
+}
+
+.layout.related-solution .slider:not(.swiper-container) {
+  overflow:hidden;
+  text-align:center;
+}
+
+.layout.related-solution .slider > div:not(.swiper-wrapper) {
+  display:inline-block;
+  margin:auto;
+}
+
+
+.layout.related-solution .box {
+  color:#fff !important;
+  display:block;
+  margin:25px 10px 0 10px;
+  text-decoration:none;
+}
+
+.layout.related-solution .box:hover {
+  color:#fff;
+}
+
+.layout.related-solution .box .image {
+  background-color:#fff;
+}
+
+.layout.related-solution .box .image img {
+  width:100%;
+}
+
+.layout.related-solution .box .text {
+  display:block;
+  line-height:1.4;
+  margin-top:10px;
+  padding:0;
+  padding-left:15px;
+  position:relative;
+}
+
+.layout.related-solution .box .text:before {
+  border-top:2px #ccc solid;
+  border-right:2px #ccc solid;
+  content:"";
+  display:inline-block;
+  height:8px;
+  left:0;
+  position:absolute;
+  transform:rotate(45deg);
+  top:6px;
+  width:8px;
+}

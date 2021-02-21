@@ -1,0 +1,1868 @@
+@charset "UTF-8";
+
+/**
+ * 
+ * 個別レイアウト (PC)
+ * June 3, 2019
+ * 
+**/
+
+/***********************************************************************
+
+  #mainContents (コンテンツエリア)
+
+***********************************************************************/
+
+/*----------------------------------------------------------------------
+  .section
+----------------------------------------------------------------------*/
+
+#mainContents .section {
+  clear:both;
+  overflow:hidden;
+  padding:50px 0;
+  width:100%;
+}
+
+/*----------------------------------------------------------------------
+  .container (幅調整用ブロック)
+----------------------------------------------------------------------*/
+
+.container .container {
+  padding-right: 80px;
+  padding-left: 80px;
+  width:100%;
+}
+
+/***********************************************************************
+
+  見出し
+
+***********************************************************************/
+
+/*----------------------------------------------------------------------
+  .headding1
+----------------------------------------------------------------------*/
+
+.headding1 {
+  font-size:2.375rem; /* 38px */
+  font-weight:bold;
+  line-height:1;
+}
+
+/*----------------------------------------------------------------------
+  .headding2
+----------------------------------------------------------------------*/
+
+.headding2 {
+  font-size:1.5rem; /* 24px */
+  font-weight:bold;
+  line-height:1.5;
+}
+
+/* .section-title */
+.headding2.section-title {
+  font-size:1.5rem; /* 24px */
+  letter-spacing:0.1em;
+  text-align:center;
+}
+
+/* .function */
+.headding2.function {
+  border-left-width:13px;
+  border-left-style:solid;
+  font-size:1.75rem; /* 28px */
+  padding-left:10px;
+}
+
+/*----------------------------------------------------------------------
+  .headding3
+----------------------------------------------------------------------*/
+
+.headding3 {
+  font-size:1.25rem; /* 20px */
+  font-weight:bold;
+}
+
+/* .function */
+.headding3.function {
+  border-bottom-width:1px;
+  border-bottom-style:solid;
+  font-size:1.25rem; /* 20px */
+  padding-bottom:10px;
+}
+
+/*----------------------------------------------------------------------
+  .headding4
+----------------------------------------------------------------------*/
+
+.headding4 {
+  font-size:1rem; /* 16px */
+  font-weight:bold;
+}
+
+/*----------------------------------------------------------------------
+  .headding5
+----------------------------------------------------------------------*/
+
+.headding5 {
+  font-size:1rem; /* 16px */
+  font-weight:bold;
+}
+
+/***********************************************************************
+
+  #contents-head (メインビジュアルエリア)
+
+***********************************************************************/
+
+#contents-head {
+  background-image:url(../img/mainvisual.jpg);
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  height:200px;  /* メインビジュアルエリアの高さ設定 */
+  overflow:hidden;
+  position:relative;
+}
+
+#contents-head > .wrap {
+  height:100%;
+  overflow:hidden;
+  position:relative;
+}
+
+/*----------------------------------------------------------------------
+  #brand-area (ブランド名)
+----------------------------------------------------------------------*/
+
+#contents-head #brand-area {
+  align-items:center;
+  display:flex;
+  left:0;
+  margin:auto;
+  position:absolute;
+  right:0;
+  top:50%;
+  -webkit-transform:translate(0, -50%); /* Safari用 */
+  transform: translate(0, -50%);
+  width:940px;
+  z-index:2;
+}
+
+#contents-head #brand-area .wrap {
+  width:50%;
+}
+
+#mainContents:not(.js) #contents-head #brand-area .wrap {
+  overflow:hidden;
+}
+
+#contents-head #brand-area .wrap + .wrap {
+  padding-left:40px;
+}
+
+#contents-head #brand-area .background {
+  display:inline-block;
+  float:right;
+}
+
+#contents-head #brand-area .background.white {
+  background-color:rgba(255,255,255,0.5);
+}
+
+#contents-head #brand-area .background.black {
+  background-color:rgba(0,0,0,0.5);
+}
+
+#contents-head #brand-area .title {
+  font-size:1rem; /* 16px */
+  font-weight:bold;
+  line-height:1.3;
+}
+
+#contents-head #brand-area .title .brand-logo {
+  display:block;
+  font-style:italic;
+}
+
+#contents-head #brand-area .title .brand-logo img {
+  max-height:20px;
+}
+
+#contents-head #brand-area .title .brand-name {
+  display:inline-block;
+  font-size:2.625rem; /* 42px */
+  line-height:1;
+  margin-top:5px;
+}
+
+#contents-head #brand-area .title .brand-name img {
+  max-height:60px;
+}
+
+#contents-head #brand-area .more {
+  margin-top:20px;
+}
+
+/*----------------------------------------------------------------------
+  #mainvisual (メインビジュアル)
+----------------------------------------------------------------------*/
+
+#mainvisual {
+  height:100%;
+  text-align:center;
+}
+
+#mainvisual .swiper-slide {
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+/***********************************************************************
+
+  #contents-menu (コンテンツメニューエリア)
+
+***********************************************************************/
+
+#contents-menu > .fixed {
+  background-color:#000;
+  font-size:0.875rem; /* 14px */
+  top:0;
+  transition:all 1000ms;
+}
+
+#contents-menu > .fixed:not(.moving) {
+  overflow:hidden;
+}
+
+#contents-menu > .fixed.moving {
+  left:0;
+  position:fixed;
+  top:0 !important;
+  width:100%;
+  z-index:1000;
+}
+
+#contents-menu ul {
+  list-style:none;
+}
+
+#contents-menu .container {
+  padding-right:0;
+}
+
+/*----------------------------------------------------------------------
+  .brand-name (ブランド名)
+----------------------------------------------------------------------*/
+
+#contents-menu .brand-name {
+  align-items:center;
+  color:#fff;
+  float:left;
+  font-size:1.125rem; /* 18px */
+  font-weight:bold;
+  height:50px;
+  line-height:1em;
+  order:1;
+  padding:5px 0;
+}
+
+.js #contents-menu .brand-name {
+  display:flex;
+}
+
+#contents-menu .brand-name a {
+  color:#fff;
+  text-decoration:none;
+}
+
+#contents-menu .brand-name a:hover {
+  text-decoration:underline;
+}
+
+#contents-menu .brand-name img {
+  max-height:25px;
+}
+
+/*----------------------------------------------------------------------
+  #menu (コンテンツメニュー)
+----------------------------------------------------------------------*/
+
+#contents-menu #menu {
+  float:right;
+}
+
+.js #contents-menu #menu {
+  display:flex;
+}
+
+#contents-menu #menu dt {
+  display:none;
+}
+
+#contents-menu #menu dd {
+  display:block !important;
+}
+
+/*  .lv1
+----------------------------------------------------------------------*/
+
+#contents-menu #menu ul.lv1 {
+  float:left;
+}
+
+#contents-menu #menu ul.lv1 > li {
+  float:left;
+  margin:0;
+  padding:0;
+}
+
+#contents-menu #menu ul.lv1 > li > a,
+#contents-menu #menu ul.lv1 > li > span.act {
+  align-items:center;
+  color:#fff;
+  display:flex;
+  flex-wrap:wrap;
+  height:50px;
+  line-height:1;
+  padding-right:18px;
+  padding-left:18px;
+  text-decoration:none;
+  transition:all .2s;
+}
+
+#contents-menu #menu ul.lv1 > li.on > a {
+  background-color:#555;
+}
+
+#contents-menu #menu ul.lv1 > li > span.act {
+  background-color:#0c264d;
+}
+
+#contents-menu #menu ul.lv1 > li.parent > a:after,
+#contents-menu #menu ul.lv1 > li.parent > span.act:after {
+  border-top:2px #fff solid;
+  border-right:2px #fff solid;
+  content:"";
+  display:inline-block;
+  height:8px;
+  margin-left:10px;
+  transform:rotate(135deg);
+  width:8px;
+}
+
+#contents-menu #menu ul.lv1 > li > a,
+#contents-menu #menu ul.lv1 > li > span.act {
+  align-items:center;
+  color:#fff;
+  display:flex;
+  flex-wrap:wrap;
+  height:50px;
+  line-height:1;
+  padding-right:20px;
+  padding-left:20px;
+  text-decoration:none;
+  transition:all .2s;
+}
+
+#contents-menu #menu ul.lv1 > li.selected > a,
+#contents-menu #menu ul.lv1 > li.selected > span.act {
+  background-color:#555;
+}
+
+#contents-menu #menu ul.lv1 > li > a:hover {
+  text-decoration:underline;
+}
+
+#contents-menu #menu .child {
+  background-color:#555;
+  box-shadow:0px 9px 6px 0 rgba(0,0,0,0.3);
+  text-align:center;
+}
+
+.js #contents-menu #menu .child {
+  left:0;
+  position:absolute;
+  width:100%;
+  z-index:3;
+}
+
+#contents-menu.moving #menu .child {
+  position:fixed;
+
+}
+
+#contents-menu #menu .child .wrap {
+  display:table;
+  margin:auto;
+  text-align:left;
+  width:960px;
+}
+
+#contents-menu #menu .child .wrap .box {
+  display:table-cell;
+  padding:0 10px 20px;
+  vertical-align:top;
+}
+
+/*  .lv2
+----------------------------------------------------------------------*/
+
+#contents-menu #menu ul.lv2 {
+  font-weight:bold;
+}
+
+#contents-menu #menu ul.lv2 li {
+  position:relative;
+}
+
+#contents-menu #menu ul.lv2 li:not(.icon) {
+  padding-left:15px;
+}
+
+#contents-menu #menu ul.lv2 > li + li {
+  margin-top:20px;
+}
+
+#contents-menu #menu .box ul.lv2:first-child > li:not(.icon):first-child {
+  margin-top:30px;
+}
+
+#contents-menu #menu ul.lv2 li:before {
+  border-top:1px #999 solid;
+  border-right:1px #999 solid;
+  content:"";
+  display:block;
+  height:7px;
+  left:0;
+  position:absolute;
+  top:0.4em;
+  transform:rotate(45deg);
+  width:7px;
+}
+
+#contents-menu #menu ul.lv2 li.icon:before {
+  display:none;
+}
+
+#contents-menu #menu ul.lv2 a,
+#contents-menu #menu ul.lv2 span.act {
+  color:#fff;
+  text-decoration:none;
+}
+
+#contents-menu #menu ul.lv2 > li > a,
+#contents-menu #menu ul.lv2 > li > span.act {
+  display:inline-block;
+  line-height:1.4;
+}
+
+#contents-menu #menu ul.lv2 li.icon > a,
+#contents-menu #menu ul.lv2 li.icon > span.act {
+  align-items:center;
+  display:flex;
+  flex-wrap:wrap;
+  min-height:80px;
+  padding:0 0 0 70px;
+  position:relative;
+}
+
+#contents-menu #menu ul.lv2 li.icon > span.act {
+  background-color:rgba(12,38,77,0.5);
+}
+
+#contents-menu #menu ul.lv2 li.icon.center > a,
+#contents-menu #menu ul.lv2 li.icon.center > span.act {
+  justify-content:center;
+  padding-left:0;
+}
+
+@media all and (-ms-high-contrast:none) { /* for IE */
+
+  #contents-menu #menu ul.lv2 li.icon {
+    display:table;
+    width:100%;
+  }
+
+  #contents-menu #menu ul.lv2 li.icon > a,
+  #contents-menu #menu ul.lv2 li.icon > span.act {
+    display:table-cell;
+    vertical-align:middle;
+    width:inherit;
+  }
+
+}
+
+#contents-menu #menu ul.lv2 a:hover {
+  color:#fad737;
+  text-decoration:underline;
+}
+
+#contents-menu #menu ul.lv2 img:not(.blank) {
+  height:50px;
+  width:50px;
+}
+
+#contents-menu #menu ul.lv2 li.icon.center img:not(.blank) {
+  margin-right:10px;
+}
+
+#contents-menu #menu ul.lv2 li.icon:not(.center) img:not(.blank) {
+  bottom:0;
+  left:10px;
+  object-fit:contain;
+  margin:auto;
+  position:absolute;
+  top:0;
+}
+
+@media all and (-ms-high-contrast:none) { /* for IE */
+
+  #contents-menu #menu ul.lv2 li.icon img:not(.blank) {
+    bottom:auto !important;
+    height:auto;
+    top:14px !important;
+  }
+
+}
+
+/*  .lv3
+----------------------------------------------------------------------*/
+
+#contents-menu #menu ul.lv3 {
+  font-size:0.812rem; /* 13px */
+  font-weight:normal;
+}
+
+@media all and (-ms-high-contrast:none) { /* for IE */
+
+  #contents-menu #menu .icon ul.lv3 {
+    display:table-row-group;
+  }
+
+}
+
+#contents-menu #menu ul.lv3 li {
+  margin-top:5px;
+}
+
+/*  .close
+----------------------------------------------------------------------*/
+
+#contents-menu #menu dd > .close {
+  display:none;
+}
+
+#contents-menu #menu .close:before {
+  border-right:5px solid transparent;
+  border-bottom:9px solid #fff;
+  border-left:5px solid transparent;
+  content:"";
+  display:inline-block;
+  margin-right:5px;
+  vertical-align:middle;
+}
+
+#contents-menu #menu .close:after {
+  content:"";
+  display:inline-block;
+  height:5px;
+  margin-left:5px;
+  vertical-align:middle;
+  width:5px;
+}
+
+/*  .contact (Contact Us リンク)
+----------------------------------------------------------------------*/
+
+#contents-menu #menu p.contact {
+  display:inline-block;
+  order:2;
+  white-space:nowrap;
+}
+
+#contents-menu #menu p.contact a,
+#contents-menu #menu p.contact span {
+  align-items:center;
+  color:#fff;
+  display:flex;
+  height:50px;
+  line-height:1em;
+  padding-right:20px;
+  padding-left:20px;
+  text-decoration:none;
+  transition:all .2s;
+}
+
+#contents-menu #menu p.contact a:hover {
+  text-decoration:underline;
+}
+
+/***********************************************************************
+
+  #foot-contact (ページ下部のお問い合わせリンク)
+
+***********************************************************************/
+
+#foot-contact a {
+  padding:15px 70px;
+  position:relative;
+}
+
+#foot-contact a.large {
+  font-size:1.25rem; /* 20px */
+  padding:20px 80px;
+}
+
+#foot-contact .icon {
+  bottom:0;
+  font-size:0;
+  height:40px;
+  left:10px;
+  margin:auto;
+  position:absolute;
+  top:0;
+}
+
+#foot-contact .icon img {
+  height:100%;
+}
+
+/***********************************************************************
+
+  #foot-links (ページ下部のリンクエリア)
+
+***********************************************************************/
+
+#foot-links {
+  clear:both;
+}
+
+#foot-links > div {
+  padding:10px 0;
+}
+
+#foot-links > div.fixed {
+  background-color:rgba(255,255,255,0.9);
+  bottom:0;
+  width:100%;
+  z-index:1;
+}
+
+#foot-links > div.fixed.moving {
+  position:fixed;
+  z-index:998;
+}
+
+/*----------------------------------------------------------------------
+  .wrap
+----------------------------------------------------------------------*/
+
+#foot-links .wrap {
+  display:table;
+  width:100%;
+}
+  
+#foot-links div.fixed .wrap {
+  padding:0 130px;/* 70px */
+}
+
+#foot-links .wrap > div {
+  display:table-cell;
+}
+
+/*----------------------------------------------------------------------
+  .text (テキストエリア)
+----------------------------------------------------------------------*/
+
+#foot-links .text {
+  line-height:1.4;
+  vertical-align:middle;
+}
+
+#foot-links .text > * {
+  display:inline-block;
+  margin:auto;
+  text-align:left;
+}
+
+#foot-links .text.center > * {
+  margin:auto;
+}
+
+#foot-links .text.right > * {
+  margin-right:0;
+}
+
+/*----------------------------------------------------------------------
+  .links (リンクエリア)
+----------------------------------------------------------------------*/
+
+#foot-links .links {
+  letter-spacing:-0.4em;
+  text-align:center;
+  vertical-align:bottom;
+  width:100%;
+}
+
+#foot-links .text + .links {
+  display:table-cell;
+  padding-left:30px;
+  width:auto;
+}
+
+#foot-links .links > div {
+  display:inline-block;
+  letter-spacing:0;
+  padding-left:10px;
+  text-align:center;
+}
+
+#foot-links .links:first-child > div:first-child {
+  padding-left:0;
+}
+
+#foot-links .text + .links > div {
+  display:table-cell;
+  width:auto;
+}
+
+#foot-links .links img {
+  max-width:inherit;
+}
+
+/***********************************************************************
+
+  .layout.topics (トピックス)
+
+***********************************************************************/
+
+.layout.topics .category.article:before { background-color:#50bebe; }
+.layout.topics .category.report:before { background-color:#64afe1; }
+.layout.topics .category.information:before { background-color:#fad737; }
+.layout.topics .category.event:before { background-color:#af8bc8; }
+.layout.topics .category.products:before { background-color:#fa9628; }
+
+/*----------------------------------------------------------------------
+  .boxes (ボックスタイプ)
+----------------------------------------------------------------------*/
+
+.layout.topics.boxes {
+  text-align:center;
+}
+
+.layout.topics.boxes a {
+  color:#333 !important;
+  text-decoration:none;
+}
+
+.layout.topics.boxes .wrap {
+  display:inline-block;
+  text-align:left;
+}
+
+.layout.topics.boxes .box {
+  background-color:#fff;
+  display:block;
+  float:left;
+  margin:25px 10px 0 10px;
+  width:220px;
+}
+
+.layout.topics.boxes .box:nth-child(-n+4) {
+  margin-top:0;
+}
+
+.layout.topics.boxes .box:nth-child(4n+1) {
+  clear:left;
+  margin-left:0;
+}
+
+.layout.topics.boxes .box:nth-child(4n+4),
+.layout.topics.boxes .box:last-child {
+  margin-right:0;
+}
+
+.layout.topics.boxes .image {
+  background-color:#fff;
+}
+
+#mainContents:not(.js) .layout.topics.boxes .image img {
+  width:100%;
+}
+
+.layout.topics.boxes .text {
+  padding:15px;
+}
+
+.layout.topics.boxes .text dd {
+  font-size:0.875rem; /* 14px */
+  line-height:1.4;
+}
+
+.layout.topics.boxes .text .category {
+  color:#969696;
+  font-size:0.625rem; /* 10px */
+  margin-bottom:10px;
+}
+
+.layout.topics.boxes .text .category:before {
+  content:"";
+  display:inline-block;
+  height:8px;
+  margin-right:5px;
+  width:8px;
+}
+
+.layout.topics.boxes .text .date {
+  color:#969696;
+  font-size:0.625rem; /* 10px */
+  margin-top:15px;
+  text-align:right;
+}
+
+/*----------------------------------------------------------------------
+  .text (テキストタイプ)
+----------------------------------------------------------------------*/
+
+.layout.topics.text .box {
+  border-bottom:1px #969696 dashed;
+  padding:15px 0;
+}
+
+.layout.topics.text .category {
+  color:#969696;
+  font-size:0.875rem; /* 14px */
+}
+
+.layout.topics.text .category:before {
+  content:"";
+  display:inline-block;
+  height:12px;
+  margin-right:5px;
+  width:12px;
+}
+
+.layout.topics.text .date {
+  display:inline-block;
+  margin-left:15px;
+}
+
+/***********************************************************************
+
+  .layout.figure (画像ボックス ※キャプションあり)
+
+***********************************************************************/
+
+.layout.figure {
+  text-align:center;
+}
+
+.layout.figure .image,
+.layout.figure .popup {
+  display:block;
+  text-align:center;
+}
+
+.layout.figure .caption {
+  color:#666;
+  display:block;
+  font-size:0.875rem; /* 14px */
+  margin-top:5px;
+}
+
+/***********************************************************************
+
+  .toggle-more (もっと見るボックス)
+
+***********************************************************************/
+
+.toggle-more .button {
+  clear:both;
+  display:block;
+  padding-top:20px;
+  text-align:center;
+}
+
+/*----------------------------------------------------------------------
+  .more, .close
+----------------------------------------------------------------------*/
+
+.toggle-more .button .more,
+.toggle-more .button .close {
+  color:#777;
+  display:none;
+  cursor:pointer;
+  display:inline-block;
+}
+
+.toggle-more .button .more:hover,
+.toggle-more .button .close:hover {
+  text-decoration:underline;
+}
+
+.toggle-more .button .more:after,
+.toggle-more .button .close:after {
+  border-top:2px #777 solid;
+  border-right:2px #777 solid;
+  content:"";
+  display:inline-block;
+  height:9px;
+  line-height:1;
+  margin-left:10px;
+  vertical-align:top;
+  width:9px;
+}
+
+.toggle-more .button .more:after {
+  margin-top:6px;
+  transform:rotate(135deg);
+}
+
+.toggle-more .button .close:after {
+  margin-top:10px;
+  transform:rotate(-45deg);
+}
+
+/***********************************************************************
+
+  .fade-in / .scroll-in  (ふわっと浮き出る表示)
+
+***********************************************************************/
+
+.fade-in {
+  transition:all 750ms;
+}
+
+.scroll-in {
+  opacity:1 !important;
+  transform:translate(0, 0) !important;
+}
+
+/***********************************************************************
+
+  リンクホバー時にリンク内の画像のエフェクト
+
+***********************************************************************/
+
+a img.hover.effect {
+  transition:all .2s;
+}
+
+a:hover img.hover.effect {
+  opacity:0.7;
+}
+
+/***********************************************************************
+
+  .layout.iconset (アイコンボックス)
+
+***********************************************************************/
+
+/*----------------------------------------------------------------------
+  .type1
+----------------------------------------------------------------------*/
+
+.layout.iconset.type1 .icon {
+  line-height:1;
+  padding:40px 0 30px;
+  text-align:center;
+}
+
+/*  .padding (余白あり)
+----------------------------------------------------------------------*/
+
+.layout.iconset.type1.padding {
+  padding:0 15px 20px;
+}
+
+/*  .horizontal (横向き)
+----------------------------------------------------------------------*/
+
+.layout.iconset.type1.horizontal {
+  min-height:130px;
+  padding:20px 15px;
+  position:relative;
+}
+
+.layout.iconset.type1.horizontal .icon {
+  height:100px;
+  left:15px;
+  padding:0;
+  position:absolute;
+  top:15px;
+  width:100px;
+}
+
+.layout.iconset.type1.horizontal .text {
+  margin-left:120px;
+}
+
+/*----------------------------------------------------------------------
+  .type2
+----------------------------------------------------------------------*/
+
+.layout.iconset.type2 {
+  min-height:110px;
+  position:relative;
+}
+
+.layout.iconset.type2 .icon {
+  height:110px;
+  left:10px;
+  position:absolute;
+  top:0;
+  width:110px;
+}
+
+.layout.iconset.type2 .icon img {
+  left:50%;
+  position:absolute;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+.layout.iconset.type2 .text {
+  margin-left:160px;
+}
+
+/*----------------------------------------------------------------------
+  .type3
+----------------------------------------------------------------------*/
+
+.layout.iconset.type3 .icon {
+  line-height:1;
+  padding:5px 0 30px;
+  text-align:center;
+}
+
+/*  .padding (余白あり)
+----------------------------------------------------------------------*/
+
+.layout.iconset.type3.padding {
+  padding:0 15px 20px;
+}
+
+/*  .horizontal (横向き)
+----------------------------------------------------------------------*/
+
+.layout.iconset.type3.horizontal {
+  min-height:130px;
+  padding:20px 15px;
+  position:relative;
+}
+
+.layout.iconset.type3.horizontal .icon {
+  height:100px;
+  left:15px;
+  padding:0;
+  position:absolute;
+  top:15px;
+  width:100px;
+}
+
+.layout.iconset.type3.horizontal .text {
+  margin-left:120px;
+}
+
+/***********************************************************************
+
+  .layout.talk (会話ボックス)
+
+***********************************************************************/
+
+.layout.talk {
+  overflow:hidden;
+}
+
+.layout.talk + .talk {
+  margin-top:30px;
+}
+
+.layout.talk .icon {
+  float:left;
+  text-align:left !important;
+  width:80px;
+}
+
+.layout.talk .icon.right {
+  float:right;
+}
+
+.layout.talk .icon .name {
+  font-size:0.875rem; /* 14px */
+  margin-top:5px;
+  word-break:break-all;
+}
+
+.layout.talk .text {
+  background-color:#efefef;
+  margin-right:160px;
+  margin-left:100px;
+  padding:15px;
+  position:relative;
+}
+
+.layout.talk .icon.right + .text {
+  margin-right:100px;
+  margin-left:160px;
+}
+
+.layout.talk .text:before {
+  content:"";
+  height:0;
+  line-height:1;
+  position:absolute;
+  top:30px;
+  width:0;
+}
+
+.layout.talk .icon.left + .text:before {
+  border-top:12px transparent solid;
+  border-right:20px #efefef solid;
+  border-bottom:12px transparent solid;
+  border-left:none;
+  left:-20px;
+}
+
+.layout.talk .icon.right + .text:before {
+  border-top:12px transparent solid;
+  border-right:none;
+  border-bottom:12px transparent solid;
+  border-left:20px #efefef solid;
+  right:-20px;
+}
+
+/***********************************************************************
+
+  .layout.tabs (タブボックス)
+
+***********************************************************************/
+
+.layout.tabs {
+  padding-bottom:1px;
+}
+
+.layout.tabs .wrap {
+  letter-spacing:-0.4em;
+  position:relative;
+}
+
+.layout.tabs .wrap:after {
+  background-color:#969696;
+  bottom:-1px;
+  content:"";
+  display:block;
+  height:1px;
+  left:0;
+  position:absolute;
+  width:100%;
+}
+
+.layout.tabs .tab {
+  display:inline-block;
+  letter-spacing:0;
+  margin:0 5px -1px 0;
+  text-align:center;
+}
+
+.layout.tabs .tab:last-child {
+  margin-right:0;
+}
+
+.layout.tabs .tab a,
+.layout.tabs .tab span {
+  border-radius:5px 5px 0 0;
+  display:block;
+  line-height:1;
+  padding:15px 20px;
+  position:relative;
+  text-decoration:none;
+}
+
+.layout.tabs .tab a {
+  background:#e3e3e3;
+  border:1px #c9c9c9 solid;
+  border-bottom-color:#969696;
+}
+
+.layout.tabs .tab span {
+  background:#fff;
+  border:1px #969696 solid;
+  border-bottom-color:#fff;
+}
+
+.layout.tabs .tab span:after {
+  background-color:#fff;
+  bottom:-1px;
+  content:"";
+  display:block;
+  height:1px;
+  left:0;
+  position:absolute;
+  width:100%;
+  z-index:1;
+}
+
+/***********************************************************************
+
+  .layout.pagelinks (ページ内リンク)
+
+***********************************************************************/
+
+.layout.pagelinks {
+  letter-spacing:-0.4em;
+}
+
+.layout.pagelinks li {
+  display:inline-block;
+  letter-spacing:0;
+  margin-right:20px;
+  position:relative;
+}
+
+.layout.pagelinks li:before {
+  border-top:2px #0045b3 solid;
+  border-right:2px #0045b3 solid;
+  content:"";
+  display:inline-block;
+  height:8px;
+  margin-top:-7px;
+  margin-right:10px;
+  transform:rotate(135deg);
+  vertical-align:middle;
+  width:8px;
+}
+
+/***********************************************************************
+
+  .layout.contact (お問い合わせページ)
+
+***********************************************************************/
+
+.layout.contact .title {
+  font-size:1.5rem; /* 24px */
+  font-weight:normal;
+}
+
+.layout.contact .title.icon {
+  min-height:50px;
+  padding-top:7px;
+  padding-left:60px;
+  position:relative;
+}
+
+.layout.contact .title.icon:before {
+  background-position:center;
+  background-size:cover;
+  content:"";
+  display:block;
+  height:50px;
+  left:0;
+  position:absolute;
+  top:0;
+  width:50px;
+}
+
+.layout.contact .title.icon.form:before { background-image:url(../img/contact/form.png); }
+.layout.contact .title.icon.mail:before { background-image:url(../img/contact/mail.png); }
+.layout.contact .title.icon.tel:before { background-image:url(../img/contact/tel.png); }
+.layout.contact .title.icon.fax:before { background-image:url(../img/contact/fax.png); }
+.layout.contact .title.icon.map:before { background-image:url(../img/contact/map.png); }
+
+.layout.contact .box {
+  padding-left:60px;
+}
+
+/*----------------------------------------------------------------------
+  #attention (注意事項)
+----------------------------------------------------------------------*/
+
+.layout.contact #attention {
+  border:2px #ccc solid;
+  padding:25px 20px;
+}
+
+.layout.contact #attention .title {
+  font-size:1.25rem; /* 20px */
+}
+
+/***********************************************************************
+
+  .layout.interview (インタビュー動画)
+
+***********************************************************************/
+
+.layout.interview {
+  text-align:center;
+}
+
+.layout.interview a {
+  color:#fff !important;
+  text-decoration:none;
+}
+
+.layout.interview .wrap {
+  display:inline-block;
+  text-align:left;
+}
+
+.layout.interview .box {
+  display:block;
+  float:left;
+  margin:0 10px 0 10px;
+  width:300px;
+}
+
+.layout.interview .box:nth-child(-n+3) {
+  margin-top:0;
+}
+
+.layout.interview .box:nth-child(3n+1) {
+  clear:left;
+  margin-left:0;
+}
+
+.layout.interview .box:nth-child(3n+3) {
+  margin-right:0;
+}
+
+.layout.interview .box .image {
+  background-color:#fff;
+}
+
+.layout.interview .box .image img {
+  width:100%;
+}
+
+.layout.interview .box .text {
+  padding:20px;
+}
+
+.layout.interview .box .text dt {
+  font-size:1.375rem; /* 22px */
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.layout.interview .box .text dd {
+  font-size:0.875rem; /* 14px */
+}
+
+.layout.interview .box .text p.right {
+  margin-top:20px;
+}
+
+/***********************************************************************
+
+  .slider-inner (スライダー内ボックス)
+
+***********************************************************************/
+
+.slider-inner {
+  margin-right:auto;
+  margin-left:auto;
+  text-align:left;
+}
+
+.slider-inner .box {
+  display:block;
+}
+
+.slider-inner .box .image {
+  background-color:#fff;
+}
+
+.interview .box .image img {
+  width:100%;
+}
+
+.slider-inner .box .text {
+  padding:20px;
+}
+
+/***********************************************************************
+
+  スライダー(Swiper)
+
+***********************************************************************/
+
+.swiper-container {
+  text-align:center;
+}
+
+#mainContents:not(.js) .swiper-wrapper {
+  display:block;
+}
+
+.js .swiper-container {
+  padding-bottom:50px;
+}
+
+.js .swiper-custom-parent {
+  padding-right:10px;
+  padding-left:10px;
+  position:relative;
+}
+
+.js .swiper-custom-parent.controler-unoverlap {
+  padding-right:45px;
+  padding-left:45px;
+}
+
+.swiper-control {
+  display:none;
+}
+
+/*----------------------------------------------------------------------
+  ページ送り
+----------------------------------------------------------------------*/
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color:rgba(174,174,174,0.5);
+  background-image:none !important;
+  bottom:40px;
+  height:76px;
+  margin:auto;
+  top:0;
+  transition:all .2s;
+  width:36px;
+}
+
+.swiper-button-next {
+  right:-10px;
+}
+
+.swiper-button-prev {
+  left:-10px;
+}
+
+/* 白色 */
+.swiper-control.white .swiper-button-next:hover,
+.swiper-control.white .swiper-button-prev:hover { background-color:rgba(255,255,255,0.5); }
+
+/* 青色 */
+.swiper-control.blue .swiper-button-next:hover,
+.swiper-control.blue .swiper-button-prev:hover { background-color:rgba(24,78,156,0.5); }
+
+/* 緑色 */
+.swiper-control.green .swiper-button-next:hover,
+.swiper-control.green .swiper-button-prev:hover { background-color:rgba(0,117,128,0.5); }
+
+/* 紫色 */
+.swiper-control.purple .swiper-button-next:hover,
+.swiper-control.purple .swiper-button-prev:hover { background-color:rgba(100,64,128,0.5); }
+
+/* 燈色 */
+.swiper-control.orange .swiper-button-next:hover,
+.swiper-control.orange .swiper-button-prev:hover { background-color:rgba(185,71,1,0.5); }
+
+.swiper-button-next:before,
+.swiper-button-prev:before {
+  border-top:3px rgba(255,255,255,1) solid;
+  border-right:3px rgba(255,255,255,1) solid;
+  bottom:0;
+  content:"";
+  display:block;
+  height:13px;
+  left:0;
+  margin:auto;
+  position:absolute;
+  right:0;
+  top:0;
+  transition:all .2s;
+  width:13px;
+}
+
+.swiper-button-prev:before {
+  right:-4px;
+  transform:rotate(-135deg);
+}
+
+.swiper-button-next:before {
+  left:-4px;
+  transform:rotate(45deg);
+}
+
+/*----------------------------------------------------------------------
+  ページネーション
+----------------------------------------------------------------------*/
+
+.swiper-pagination {
+  bottom:0;
+  left:0;
+  margin:auto;
+  right:0;
+  width:100%;
+}
+
+.swiper-pagination-bullet {
+  border:2px #aeaeae solid;
+  background-color:#fff;
+  height:14px;
+  margin:0 10px;
+  opacity:1;
+  width:14px;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  border-color:transparent;
+}
+
+/* 白色 */
+.swiper-control.white .swiper-pagination .swiper-pagination-bullet { background-color:#aeaeae;  }
+.swiper-control.white .swiper-pagination .swiper-pagination-bullet-active { background-color:#ffffff !important;  }
+
+/* 青色 */
+.swiper-control.blue .swiper-pagination .swiper-pagination-bullet-active { background-color:#184e9c !important; }
+
+/* 緑色 */
+.swiper-control.green .swiper-pagination .swiper-pagination-bullet-active { background-color:#007580 !important; }
+
+/* 紫色 */
+.swiper-control.purple .swiper-pagination .swiper-pagination-bullet-active { background-color:#644080 !important; }
+
+/* 燈色 */
+.swiper-control.orange .swiper-pagination .swiper-pagination-bullet-active { background-color:#b94b01 !important; }
+
+/***********************************************************************
+
+  サムネイル付きスライダー(Swiper)
+
+***********************************************************************/
+
+.js .slider-thumbs-gallery {
+  overflow:hidden;
+  padding:0;
+}
+
+.js .slider-thumbs-gallery .swiper-container {
+  float:left;
+  padding-bottom:0;
+  width:670px;
+}
+
+.swiper-pagination-thumbs {
+  float:right;
+  letter-spacing:-0.4em;
+  width:250px;
+}
+
+.swiper-pagination-thumbs .swiper-pagination-thumb {
+  cursor:pointer;
+  display:inline-block;
+  letter-spacing:0;
+  width:120px;
+}
+
+.swiper-pagination-thumbs .swiper-pagination-thumb:nth-child(2n+1) {
+  margin-right:10px;
+}
+
+.swiper-pagination-thumbs .swiper-pagination-thumb:nth-child(n + 3) {
+  margin-top:10px;
+}
+
+.swiper-pagination-thumbs .swiper-pagination-thumb img {
+  transition:all .2s;
+}
+
+.swiper-pagination-thumbs .swiper-pagination-thumb img:hover {
+  opacity:0.7;
+}
+
+/***********************************************************************
+
+  ポップアップ (Magnific Popup)
+
+***********************************************************************/
+
+.mfp-close {
+  background-color:#64afe1 !important;
+  color:#fff !important;
+  height:40px !important;
+  opacity:1 !important;
+  padding-right:0 !important;
+  right:0 !important;
+  text-align:center !important;
+  top:-40px !important;
+  width:40px !important;
+}
+
+/*----------------------------------------------------------------------
+  .popup
+----------------------------------------------------------------------*/
+
+.popup {
+  display:inline-block;
+  position:relative;
+  text-decoration:none;
+}
+
+/*----------------------------------------------------------------------
+  .icon.zoom (ズームアイコン)
+----------------------------------------------------------------------*/
+
+.popup .icon.zoom {
+  background-color:rgba(255,255,255,0.5);
+  bottom:10px;
+  color:#184e9c;
+  display:inline-block;
+  font-size:0.75rem; /* 12px */
+  font-weight:bold;
+  left:10px;
+  line-height:1;
+  padding:4px 10px 4px 5px;
+  position:absolute;
+}
+
+.popup .icon.zoom:before {
+  background:url(../img/zoom.png) no-repeat center;
+  background-size:100%;
+  content:"";
+  display:inline-block;
+  height:16px;
+  margin-right:5px;
+  vertical-align:middle;
+  width:16px;
+}
+
+/*----------------------------------------------------------------------
+  .play-mark (再生マーク)
+----------------------------------------------------------------------*/
+
+.popup.play-mark {
+  position:relative;
+}
+
+.popup.play-mark:before,
+.popup.play-mark:after {
+  bottom:0;
+  content:"";
+  display:block;
+  left:0;
+  line-height:1;
+  margin:auto;
+  position:absolute;
+  right:0;
+  top:0;
+}
+
+.popup.play-mark:before {
+  background-color:rgba(0,0,0,0.4);
+  border-radius:100%;
+  height:100px;
+  transition:all .2s;
+  width:100px;
+}
+
+.popup.play-mark:hover:before {
+  background-color:#e61e1e;
+}
+
+.popup.play-mark:after {
+  border-top:15px transparent solid;
+  border-bottom:15px transparent solid;
+  border-left:26px #fff solid;
+  height:0;
+  right:-7px;
+  width:0;
+}
+
+/*----------------------------------------------------------------------
+  .modal-inner
+----------------------------------------------------------------------*/
+
+.modal-inner {
+  display:block;
+  margin:auto;
+  position:relative;
+}
+
+/***********************************************************************
+
+  動画(iframe)用レイアウト
+
+***********************************************************************/
+
+/*----------------------------------------------------------------------
+  .layout.video
+----------------------------------------------------------------------*/
+
+.layout.video {
+  height:0;
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  width:100%;
+}
+
+.layout.video iframe {
+  height:100%;
+  left:0;
+  position: absolute;
+  top:0;
+  width:100%;
+}
+
+/***********************************************************************
+
+  グリッドレイアウト
+
+***********************************************************************/
+
+/*----------------------------------------------------------------------
+  .grid (幅を固定しない)
+----------------------------------------------------------------------*/
+
+.grid {
+  display:flex;
+  justify-content:space-between;
+}
+
+.grid > .grid-cell {
+  margin:0 10px;
+  -ms-flex:1 1 0%;
+  flex:1 0 0; /* flex-grow, flex-shrink, flex-basis */
+}
+
+/*----------------------------------------------------------------------
+  .grid-fixed (幅を固定する)
+----------------------------------------------------------------------*/
+
+.grid.reverse {
+  flex-direction:row-reverse;
+}
+
+.grid > .grid-cell.size1 { flex-basis:60px; }
+.grid > .grid-cell.size2 { flex-basis:140px; }
+.grid > .grid-cell.size3 { flex-basis:220px; }
+.grid > .grid-cell.size4 { flex-basis:300px; }
+.grid > .grid-cell.size5 { flex-basis:380px; }
+.grid > .grid-cell.size6 { flex-basis:460px; }
+.grid > .grid-cell.size7 { flex-basis:540px; }
+.grid > .grid-cell.size8 { flex-basis:620px; }
+.grid > .grid-cell.size9 { flex-basis:700px; }
+.grid > .grid-cell.size10 { flex-basis:780px; }
+.grid > .grid-cell.size11 { flex-basis:860px; }
+.grid > .grid-cell.size12 { flex-basis:940px; }
+
+.grid:not(.reverse) > .grid-cell:first-child {
+  margin-left:0;
+}
+
+.grid:not(.reverse) > .grid-cell:last-child {
+  margin-right:0;
+}
+
+.grid.reverse > .grid-cell:first-child {
+  margin-right:0;
+}
+
+.grid.reverse > .grid-cell:last-child {
+  margin-left:0;
+}
+
+/***********************************************************************
+
+  注釈
+
+***********************************************************************/
+
+/*----------------------------------------------------------------------
+  .layout.note
+----------------------------------------------------------------------*/
+
+.layout.note {
+  list-style:none;
+}
+
+.layout.note > li {
+  display:table;
+}
+
+.layout.note > li > .head,
+.layout.note > li > .body {
+  display:table-cell;
+  vertical-align:top;
+}
+
+.layout.note > li > .head {
+  padding-right:0.75em;
+  white-space:nowrap;
+}
+
+/*======================================================================
+
+  .layout.features (特長ボックス)
+
+======================================================================*/
+
+.layout.features {
+  text-align:center;
+}
+
+.layout.features .wrap {
+  display:inline-block;
+  text-align:left;
+}
+
+.layout.features .box {
+  border:2px #ccc solid;
+  border-radius:6px;
+  display:block;
+  float:left;
+  margin:25px 10px 0 10px;
+  padding:15px 10px;
+  position:relative;
+  width:300px;
+}
+
+#mainContents .layout.features a.box {
+  color:#333;
+  text-decoration:none;
+  transition-duration:.2s;
+  transition-property:border-color, color;
+}
+
+#mainContents .layout.features a.box:hover {
+  border-color:#528ce3;
+  color:#0045b3;
+  text-decoration:underline;
+}
+
+.layout.features .box:nth-child(-n+3) {
+  margin-top:0;
+}
+
+.layout.features .box:nth-child(3n+1) {
+  clear:left;
+  margin-left:0;
+}
+
+.layout.features .box:nth-child(3n+3),
+.layout.features .box:last-child {
+  margin-right:0;
+}
+
+.layout.features .box .icon {
+  left:0;
+  position:absolute;
+  top:0;
+}
+
+.layout.features .box .icon img {
+  max-width:80px;
+}
+
+.layout.features .box .icon + .text {
+  padding-left:75px
+}
+
+.layout.features .box .text {
+  font-size:0.875rem; /* 14px */
+  line-height:1.4;
+}
